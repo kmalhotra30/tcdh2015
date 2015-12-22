@@ -47,8 +47,8 @@
               var item=prompt("Search for a video ");
               if(item.length>0)
               {
-                  var src="https://www.youtube.com/watch?v=" + "{{i.id.VideoId}}";
-                  document.writeln("<a href =" + src + "><img ng-src='{{i.snippet.thumbnails.medium.url}}'/></a>");
+                  var src="https://www.youtube.com/watch?v=" + "{{i.id.videoId}}";
+                  document.writeln("<a target='_tab' href =" + src + "><img ng-src='{{i.snippet.thumbnails.medium.url}}'/></a>");
                   document.writeln("<p class='p'>Video Id : {{i.id.videoId}}</p>");
                   document.writeln("<p class='p'>Published on : {{i.snippet.publishedAt |date}}");
               }
