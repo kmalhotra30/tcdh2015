@@ -1,0 +1,68 @@
+<!Doctype html>
+<html>
+      <head>
+            <title>Dec Hackathon</title>
+            <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+            <style>
+                   body
+                   {
+                       background-repeat:no-repeat;
+                       background-size:cover;
+                   }
+                   #a
+                   {
+                       display:inline-block;
+                       text-align:center;
+                   }
+                   #d
+                   {
+                       display:inline-block;
+                   }
+                   .l
+                   {
+                       margin-left:100px;
+                   }
+                   .p
+                   {
+                       color:white;
+                       font-family:Georgia;
+                       font-size:130%;
+                   }
+
+                   #h
+                   {
+                       color:white;
+                       font-family:Georgia;
+                       text-align:center;
+                       font-size:50px;;
+                   }
+            </style>
+      </head>
+
+      <body ng-app="we" ng-controller="mainc" background="bg.jpg">
+       <p id="h">Welcome to the Gif Creator App</p>
+      <div id="a" ng-repeat="i in w.items">
+            <script>
+              var item=prompt("Search for a video ");
+              if(item.length>0)
+              {
+                  var src="https://www.youtube.com/watch?v=" + "{{i.id.videoId}}";
+                  document.writeln("<a target='_tab' href =" + src + "><img ng-src='{{i.snippet.thumbnails.medium.url}}'/></a>");
+                  document.writeln("<p class='p'>Video Id : {{i.id.videoId}}</p>");
+                  document.writeln("<p class='p'>Published on : {{i.snippet.publishedAt |date}}</p>");
+
+              }
+            </script>
+     </div>
+     <div id="d">
+            <script>
+                    if(item.length>0)
+                    {
+                        document.writeln("<a target='_tab' href ='p2.htm'><font size=70px><p class='l'>Page 2</p></font></a>");
+                        document.writeln("<a target='_tab' href ='index2.htm'><font size=70px><p class='l'>Create Gif</p></font></a>")
+                    }
+            </script>
+            <script src="module.js"></script>
+     </div>
+      </body>
+</html>
