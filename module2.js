@@ -6,7 +6,7 @@ app.controller('mainc',function($scope,$http){
       .success(function(data){
         $scope.w=data;
         $scope.x=$scope.w.nextPageToken;
-                              $http.get("https://www.googleapis.com/youtube/v3/search?part=snippet&pageToken=" + $scope.x+ "&maxResults=50&order=viewCount&q="+$scope.y +"&type=video&key=AIzaSyBo8ZGrVp0mXWgMQP0DT8seAEQTCtuOvFI")
+                $http.get("https://www.googleapis.com/youtube/v3/search?part=snippet&pageToken=" + $scope.x+ "&maxResults=50&order=viewCount&q="+$scope.y +"&type=video&key=AIzaSyBo8ZGrVp0mXWgMQP0DT8seAEQTCtuOvFI")
               .success(function(data){
                 $scope.z=data;
 
